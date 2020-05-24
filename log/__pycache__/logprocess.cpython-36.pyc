@@ -1,16 +1,0 @@
-3
-
-ɎΞ͉  㠠             @   sx   d Z ddlZddlZddlZddlZddlZddlZddlZddlm	Z	 G ddĠdej
-ÃZG ddĠdejÃZ
-dd	ĠZdS )
-uL   
-Created on 2020年4月8日
-
-@author: 10226475
-.用于输出日志的进程
-頠  N)ڇProcessc               @   s(   e Zd ZddĠZeddĠÁZddĠZdS )ږLogRecordStreamHandlerc             C   sܠ  x׹ü j jdÁ}t|Ádk rP tjd|Âd }| j j|Á}x(t|Á|k rb|| j j|t|Á Á }q<W | j|Á}tj|Á}| j|Á W q   P Y qX qW d S )N鄠  z>Lr   )	ڍ
-connectionڄrecvڃlenچstructچunpackڈunpickleڇloggingڍmakeLogRecordڑhandle_log_record)ڄselfڅchunkZslenڃobjچrecordɠr   򯄺\program\workspace\HackTool\log\logprocess.pyچhandle   s    
-
-zLogRecordStreamHandler.handlec             C   s
-   t j|ÁS )N)چpickleڅloads)ڃclsڄdatar   r   r   r
-   #   s    zLogRecordStreamHandler.unpicklec             C   s4   | j jd k	r| j j}n|j}tj|Á}|j|Á d S )N)Zserverڇlognameڄnamer   ډgetLoggerr   )r   r   r
