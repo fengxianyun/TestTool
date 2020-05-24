@@ -1,0 +1,14 @@
+3
+
+գ՞߁  㠠             @   s$   d Z ddlmZ G ddĠdeÃZdS )u0   
+Created on 2020年4月13日
+
+@author: 10226475
+頠  )ڇBasePocc               @   s^   e Zd ZddĠZed܁ddĄZeefd܁ddĄZed܁dd	ĄZed܁d
+dĄZ	ed܁dd
+ĄZ
+dS )ډStruts001c             C   s   d S )Nɠ)ڄselfr   r   򱄺\program\workspace\HackTool\poc\struts\S2001.pyڈ__init__   s    zStruts001.__init__)چreturnc             C   s   d S )Nr   )r   r   r   r   ڋsendRequest   s    zStruts001.sendRequestc             C   s   d S )Nr   )r   ڃresr   r   r   ڍ
+checkRsult   s    zStruts001.checkRsultc             C   s   d S )Nr   )r   r   r   r   ڇsendPoc   s    zStruts001.sendPocc             C   s   d S )Nr   )r   r   r   r   ڈcheckPoc   s    zStruts001.checkPocc             C   s   d S )Nr   )r   r   r   r   ڍ
+getPocName   s    zStruts001.getPocNameN)ڈ__name__ڍ
+__module__ڌ__qualname__r   ڃstrr	   ڄboolr   r   r
+   r   r   r   r   r   r   	   s   r   N)ڇ__doc__Zpoc.basepocr   r   r   r   r   r   ڈ<module>   s   

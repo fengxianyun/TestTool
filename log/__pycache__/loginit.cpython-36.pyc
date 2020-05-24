@@ -1,0 +1,17 @@
+3
+
+^  㠠             @   sN   d Z ddlZddlZddlZddlZddlmZ ddlmZ G ddĠdÂZ	dS )u/   
+Created on 2020年4月9日
+
+@author: 10226475
+頠  N)ڇProcess)ڕ_log_listener_processc               @   sޠ  e Zd ZejjejjejjeÁÁddÃZ	dZ
+dZdZdZ
+dZddĠZed	d
+ĠÁZeddd
+āÁZeddĠÁZeddĠÁZeddĠÁZeddĠÁZeddĠÁZdS )ڇLogInitz..ZlogsڠzZ[%(asctime)s.%(msecs)03d][%(process)s][%(levelname)s][%(filename)s:%(lineno)d] %(message)sz%Y%m%d %H:%M:%SNc             C   s   d S )Nɠ)ڄselfr   r   򬄺\program\workspace\HackTool\log\loginit.pyڈ__init__"   s    zLogInit.__init__c             C   sX   t dÁ | tjkrd}n$| tjkr(d}n| tjkr8d}nd}t d||f Á t dÁ d S )Nz2--------------------------------------------------z[WARN]z[ERROR]z[FATAL]z[INFO]z	%s %s)څprintڇloggingZWARNZERRORڅFATAL)څlevelڇmessageZ	level_strr   r   r   ڑprint_console_log%   s    
+
+
+zLogInit.print_console_logTc             C   s蠠 t jà}|jt jÁ t jà}|j|Á y||dkrLtj}tj	j
+|ÁsLtj|Á |t_| r^tj
+à tjàt_t jjdt jjÂ}t jàjt jÁ t jàj|Á tjà W n@ tk
+r⁠} z$tjt jdt|Á Â tjà W Y d d }~X nX d S )Nr   Z	localhostzinit() exception: %s)

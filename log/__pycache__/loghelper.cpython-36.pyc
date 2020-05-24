@@ -1,0 +1,14 @@
+3
+
+#՞m  㠠             @   sP   d Z ddlZejjdejjÂZejàjejÁ ejàj	eÁ G ddĠde
+ÃZdS )u/   
+Created on 2020年4月9日
+
+@author: 10226475
+頠  Nډlocalhostc               @   s<   e Zd ZeddĠÁZeddĠÁZeddĠÁZeddĠÁZd	S )
+ډLogHelperc             C   s   t j| Á d S )N)ڇloggingڄinfo)ڇmessageɠr   򮄺\program\workspace\HackTool\log\loghelper.pyr      s    zLogHelper.infoc             C   s   t j| Á d S )N)r   ڄwarn)r   r   r   r   r	      s    zLogHelper.warnc             C   s   t j| Á d S )N)r   څerror)r   r   r   r   r
+      s    zLogHelper.errorc             C   s   t j| Á d S )N)r   ڈcritical)r   r   r   r   r      s    zLogHelper.criticalN)ڈ__name__ڍ
+__module__ڌ__qualname__ڌstaticmethodr   r	   r
+   r   r   r   r   r   r      s   r   )ڇ__doc__r   ڈhandlersڍSocketHandlerژDEFAULT_TCP_LOGGING_PORTڎsocket_handlerډgetLoggerڈsetLevelڄINFOڍ
+addHandlerچobjectr   r   r   r   r   ڈ<module>   s
+   

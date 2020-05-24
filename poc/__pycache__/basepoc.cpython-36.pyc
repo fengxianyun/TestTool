@@ -1,0 +1,14 @@
+3
+
+R&՞#  㠠             @   s$   d Z ddlZG ddĠdejd̓ZdS )u/   
+Created on 2020年4月9日
+
+@author: 10226475
+頠  Nc               @   sҠ  e Zd ZdZdZddĠZejed܁ddĄÁZ	eje
+efd܁ddĄÁZejed܁d	d
+ĄÁZejed܁ddĄÁZ
+ejed܁d
+dĄÁZed܁ddĄZdS )ڇBasePocNc             C   s   ddl m} || _d S )Nr   )ډLogHelper)Z
+log.loghelperr   ڍ
+log_helper)ڄselfr   ɠr   򬄺\program\workspace\HackTool\poc\basepoc.pyڈ__init__   s    zBasePoc.__init__)چreturnc             C   s   d S )Nr   )r   r   r   r   ڋsendRequest   s    zBasePoc.sendRequestc             C   s   d S )Nr   )r   ڃresr   r   r   ڍ
+checkRsult   s    zBasePoc.checkRsultc             C   s   d S )Nr   )r   r   r   r   ڇsendPoc
