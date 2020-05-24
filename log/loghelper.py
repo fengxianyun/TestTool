@@ -4,11 +4,23 @@ Created on 2020年4月9日
 
 @author: 10226475
 '''
+import logging.handlers
 import logging
 
-socket_handler = logging.handlers.SocketHandler('localhost', logging.handlers.DEFAULT_TCP_LOGGING_PORT)
-logging.getLogger().setLevel(logging.INFO)
-logging.getLogger().addHandler(socket_handler)
+loghelper = None
+
+
+def getLogHelper():
+    global loghelper
+    if loghelper is None:
+        socket_handler = logging.handlers.SocketHandler('localhost', logging.handlers.DEFAULT_TCP_LOGGING_PORT)
+        logging.getLogger().setLevel(logging.INFO)
+        logging.getLogger().addHandler(socket_handler)
+        loghelper = LogHelper()
+    
+    return loghelper
+
+
 class LogHelper(object):
     
     @staticmethod

@@ -3,5 +3,3 @@
 .settings
 */__pycache__
 *.pyc
-/logs
-origin.py

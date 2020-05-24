@@ -5,6 +5,7 @@ Created on 2020年4月9日
 @author: 10226475
 '''
 import abc
+from log.loghelper import getLogHelper
 
 
 class BasePoc(metaclass=abc.ABCMeta):
@@ -15,8 +16,7 @@ class BasePoc(metaclass=abc.ABCMeta):
     uncertain_status = "uncertain"
     
     def __init__(self):
-        from log.loghelper import LogHelper
-        self.log_helper = LogHelper
+        self.log_helper = getLogHelper()
         
     @abc.abstractmethod
     def getFunctionList(self) -> list:
