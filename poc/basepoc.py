@@ -5,43 +5,26 @@ Created on 2020年4月9日
 @author: 10226475
 '''
 import abc
-from log.loghelper import getLogHelper
 
 
 class BasePoc(metaclass=abc.ABCMeta):
     target = None
     log_helper = None
-    success_status = "success"
-    fail_status = "fail"
-    uncertain_status = "uncertain"
     
     def __init__(self):
-        self.log_helper = getLogHelper()
-        
-    @abc.abstractmethod
-    def getFunctionList(self) -> list:
-        pass
-    
-    @abc.abstractmethod
-    def execFunction(self) -> str:
-        pass
+        from log.loghelper import LogHelper
+        self.log_helper = LogHelper
     
     @abc.abstractmethod
     def sendRequest(self) -> str:
         pass
     
     @abc.abstractmethod
-    def checkRsult(self, res) -> str:
-        '''
-        .结果分为三种
-        success
-        fail
-        uncertain
-        '''
+    def checkRsult(self, res) -> (bool, str):
         pass
     
     @abc.abstractmethod
-    def sendDefaultPoc(self) -> str:
+    def sendPoc(self) -> str:
         pass
     
     @abc.abstractmethod

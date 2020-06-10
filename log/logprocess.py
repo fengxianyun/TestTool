@@ -73,6 +73,7 @@ def _log_listener_process(log_format, log_time_format, log_file):
     console.setLevel(logging.INFO)
     console.setFormatter(logging.Formatter(fmt=log_format, datefmt=log_time_format))
     logging.getLogger().addHandler(console)
+
     tcp_server = LogRecordSocketReceiver()
 
     logging.debug('Log listener process started ...')
