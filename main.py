@@ -6,4 +6,5 @@ Created on 2020年4月8日
 主函数
 '''
 
-
+def main():
+    pass

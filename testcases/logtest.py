@@ -15,13 +15,12 @@ import os
 
 def job():
     for i in range(10):
-        base_poc = Struts001()
+        base_poc = Struts001("123")
         base_poc.log_helper.info(i)
 
 if __name__ == "__main__":
     print(1)
     LogInit.init()
-    time.sleep(10)
     print(2)
     p1 = mp.Process(target=job)
     p2 = mp.Process(target=job)
@@ -35,4 +34,5 @@ if __name__ == "__main__":
     p4.start()
     p5.start()
     print(4)
-    
+
+

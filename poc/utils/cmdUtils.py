@@ -17,3 +17,4 @@ def parse_cmd(cmd, type='string'):
     else:
         cmd_str = cmd
     return cmd_str
+
